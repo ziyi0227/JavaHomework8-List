@@ -1,0 +1,56 @@
+package second;
+
+public class Employee {
+    private int id;
+    private String name;
+    private String department;
+    private int salary;
+
+
+    public Employee(int id, String name, String department, int salary) {
+        this.id = id;
+        this.name = name;
+        this.department = department;
+        this.salary = salary;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
+    public void changePay(int newSalary){
+        this.salary = newSalary;
+    }
+
+    public void changePay(float raisePercentage){
+        this.salary = (int) (this.salary*(1+raisePercentage));
+    }
+}
